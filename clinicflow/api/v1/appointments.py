@@ -41,6 +41,7 @@ def get_available_slots(practitioner, date):
 @frappe.whitelist()
 def book_appointment(patient, practitioner, appointment_date, appointment_time,
                      appointment_type=None, notes=None):
+    frappe.only_for(["CF User", "CF Manager", "System Manager"])
     """Public-facing appointment booking API."""
     from clinicflow.services.appointment_service import AppointmentService
     try:
