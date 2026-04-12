@@ -1,0 +1,53 @@
+"scope: frontend":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "*/public/js/**"
+      - "*/public/css/**"
+      - "**/*.js"
+      - "**/*.scss"
+      - "**/*.css"
+
+"scope: backend":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/*.py"
+      - "!**/public/**"
+
+"scope: doctype":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/doctype/**/*.json"
+      - "**/doctype/**/*.py"
+
+"scope: api":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/api/**"
+
+"scope: hooks":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/hooks.py"
+
+"documentation":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/*.md"
+      - "**/help/**"
+      - "docs/**"
+
+"translation":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/translations/**"
+
+"test":
+  - changed-files:
+    - any-glob-to-any-file:
+      - "**/tests/**"
+      - "**/conftest.py"
+
+"ci/cd":
+  - changed-files:
+    - any-glob-to-any-file:
+      - ".github/workflows/**"

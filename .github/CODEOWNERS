@@ -1,0 +1,13 @@
+# CODEOWNERS — مالكو الكود
+*                           @sarapil/clinicflow-maintainers
+clinicflow/hooks.py       @sarapil/clinicflow-maintainers
+clinicflow/install.py     @sarapil/clinicflow-maintainers
+pyproject.toml              @sarapil/clinicflow-maintainers
+clinicflow/api/           @sarapil/clinicflow-maintainers
+clinicflow/services/      @sarapil/clinicflow-maintainers
+SECURITY.md                 @sarapil/clinicflow-maintainers
+.github/workflows/          @sarapil/clinicflow-maintainers
+clinicflow/public/        @sarapil/clinicflow-maintainers
+clinicflow/translations/  @sarapil/clinicflow-maintainers
+clinicflow/help/          @sarapil/clinicflow-maintainers
+*.md                        @sarapil/clinicflow-maintainers
