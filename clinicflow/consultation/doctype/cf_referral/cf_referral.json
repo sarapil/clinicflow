@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "cb_ref1",
+  "consultation",
+  "referring_doctor",
+  "cb_ref2",
+  "specialty",
+  "reason",
+  "cb_ref3",
+  "urgency",
+  "status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "CF Patient",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_ref1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consultation",
+   "fieldtype": "Link",
+   "label": "From Consultation",
+   "options": "CF Consultation"
+  },
+  {
+   "fieldname": "referring_doctor",
+   "fieldtype": "Link",
+   "label": "Referring Doctor",
+   "options": "User",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_ref2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "specialty",
+   "fieldtype": "Link",
+   "label": "To Specialty",
+   "options": "MC Specialty",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason for Referral"
+  },
+  {
+   "fieldname": "cb_ref3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "urgency",
+   "fieldtype": "Select",
+   "label": "Urgency",
+   "options": "\nRoutine\nUrgent\nEmergency",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPending\nAccepted\nCompleted\nRejected",
+   "default": "Pending",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Clinical Notes"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Consultation",
+ "name": "CF Referral",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "report": 0
+  },
+  {
+   "role": "CF Receptionist",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "clinic_name",
+  "cb_cls1",
+  "clinic_name_ar",
+  "default_currency",
+  "cb_cls2",
+  "appointment_slot_duration",
+  "s_billing_cfg",
+  "auto_invoice",
+  "cb_cls3",
+  "tax_rate",
+  "s_notif",
+  "send_appointment_reminders",
+  "cb_cls4",
+  "reminder_hours",
+  "s_ai",
+  "ai_suggestions_enabled",
+  "cb_cls5",
+  "ai_provider"
+ ],
+ "fields": [
+  {
+   "fieldname": "clinic_name",
+   "fieldtype": "Data",
+   "label": "Clinic Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_cls1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "clinic_name_ar",
+   "fieldtype": "Data",
+   "label": "Clinic Name (AR)"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Link",
+   "label": "Default Currency",
+   "options": "Currency",
+   "default": "USD"
+  },
+  {
+   "fieldname": "cb_cls2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appointment_slot_duration",
+   "fieldtype": "Int",
+   "label": "Default Slot Duration (min)",
+   "default": "15"
+  },
+  {
+   "fieldname": "s_billing_cfg",
+   "fieldtype": "Section Break",
+   "label": "Billing"
+  },
+  {
+   "fieldname": "auto_invoice",
+   "fieldtype": "Check",
+   "label": "Auto-create Invoice on Consultation",
+   "default": "0"
+  },
+  {
+   "fieldname": "cb_cls3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_rate",
+   "fieldtype": "Float",
+   "label": "Default Tax Rate %",
+   "default": "0"
+  },
+  {
+   "fieldname": "s_notif",
+   "fieldtype": "Section Break",
+   "label": "Notifications"
+  },
+  {
+   "fieldname": "send_appointment_reminders",
+   "fieldtype": "Check",
+   "label": "Send Reminders",
+   "default": "1"
+  },
+  {
+   "fieldname": "cb_cls4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reminder_hours",
+   "fieldtype": "Int",
+   "label": "Remind X Hours Before",
+   "default": "24"
+  },
+  {
+   "fieldname": "s_ai",
+   "fieldtype": "Section Break",
+   "label": "AI Features"
+  },
+  {
+   "fieldname": "ai_suggestions_enabled",
+   "fieldtype": "Check",
+   "label": "Enable AI Clinical Suggestions",
+   "default": "0"
+  },
+  {
+   "fieldname": "cb_cls5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ai_provider",
+   "fieldtype": "Select",
+   "label": "AI Provider",
+   "options": "\nopenai\ngemini\nclaude"
+  }
+ ],
+ "istable": 0,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Clinical Settings",
+ "name": "CF Clinical Settings",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

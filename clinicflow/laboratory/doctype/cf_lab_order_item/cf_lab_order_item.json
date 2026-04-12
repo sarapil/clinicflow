@@ -1,0 +1,108 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "test_name",
+  "cb_loi1",
+  "loinc_code",
+  "cb_loi2",
+  "urgency",
+  "specimen_type",
+  "cb_loi3",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "test_name",
+   "fieldtype": "Data",
+   "label": "Test Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_loi1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loinc_code",
+   "fieldtype": "Link",
+   "label": "LOINC Code",
+   "options": "MC LOINC Code"
+  },
+  {
+   "fieldname": "cb_loi2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "urgency",
+   "fieldtype": "Select",
+   "label": "Urgency",
+   "options": "\nRoutine\nUrgent\nStat",
+   "default": "Routine"
+  },
+  {
+   "fieldname": "specimen_type",
+   "fieldtype": "Data",
+   "label": "Specimen"
+  },
+  {
+   "fieldname": "cb_loi3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 1,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Laboratory",
+ "name": "CF Lab Order Item",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "report": 0
+  },
+  {
+   "role": "CF Receptionist",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

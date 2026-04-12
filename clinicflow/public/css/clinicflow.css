@@ -1,0 +1,102 @@
+/* Copyright (c) 2026, Arkan Lab — ClinicFlow */
+:root {
+    --cf-red: #DC2626;
+    --cf-red-light: #FEE2E2;
+    --cf-red-dark: #B91C1C;
+    --cf-blue: #2563EB;
+    --cf-blue-light: #DBEAFE;
+    --cf-green: #16A34A;
+    --cf-green-light: #DCFCE7;
+    --cf-amber: #D97706;
+    --cf-amber-light: #FEF3C7;
+    --cf-text: var(--text-color);
+    --cf-bg: var(--bg-color);
+    --cf-card-bg: var(--card-bg);
+    --cf-border: var(--border-color);
+}
+
+/* ── Patient Card ── */
+.cf-patient-card {
+    background: var(--cf-card-bg);
+    border-inline-start: 4px solid var(--cf-red);
+    border-radius: 8px;
+    padding: 16px;
+    margin-block-end: 12px;
+    transition: box-shadow 0.2s;
+}
+.cf-patient-card:hover {
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+}
+
+/* ── Vital Signs Ribbon ── */
+.cf-vitals-ribbon {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 12px 16px;
+    background: var(--cf-blue-light);
+    border-radius: 6px;
+    margin-block-end: 16px;
+}
+.cf-vitals-ribbon .cf-vital-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+.cf-vitals-ribbon .cf-vital-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--cf-blue);
+}
+.cf-vitals-ribbon .cf-vital-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* ── Status Badges ── */
+.cf-status-scheduled  { background: var(--cf-amber-light);  color: var(--cf-amber); }
+.cf-status-confirmed  { background: var(--cf-blue-light);   color: var(--cf-blue); }
+.cf-status-completed  { background: var(--cf-green-light);  color: var(--cf-green); }
+.cf-status-cancelled  { background: #F3F4F6;                color: #6B7280; }
+.cf-status-no-show    { background: #FEE2E2;                color: var(--cf-red); }
+
+/* ── Appointment Calendar Cell ── */
+.cf-appt-cell {
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+.cf-appt-cell:hover { opacity: 0.8; }
+
+/* ── Glass Card Effect ── */
+.cf-glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ── Hover lift ── */
+.cf-hover-lift {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.cf-hover-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ── RTL / LTR logical properties ── */
+.cf-border-red  { border-inline-start: 3px solid var(--cf-red); }
+.cf-border-blue { border-inline-start: 3px solid var(--cf-blue); }
+
+/* ── Print styles ── */
+@media print {
+    .cf-no-print { display: none !important; }
+    .cf-print-header { text-align: center; margin-block-end: 24px; }
+}

@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "service",
+  "cb_cii1",
+  "description",
+  "quantity",
+  "cb_cii2",
+  "unit_price",
+  "discount_percent",
+  "cb_cii3",
+  "total",
+  "icd_code",
+  "cb_cii4",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "service",
+   "fieldtype": "Link",
+   "label": "Service",
+   "options": "CF Service"
+  },
+  {
+   "fieldname": "cb_cii1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Qty",
+   "default": "1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_cii2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_price",
+   "fieldtype": "Currency",
+   "label": "Unit Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "discount_percent",
+   "fieldtype": "Float",
+   "label": "Discount %"
+  },
+  {
+   "fieldname": "cb_cii3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Line Total"
+  },
+  {
+   "fieldname": "icd_code",
+   "fieldtype": "Link",
+   "label": "ICD Code",
+   "options": "MC ICD Entity"
+  },
+  {
+   "fieldname": "cb_cii4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 1,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Billing",
+ "name": "CF Clinic Invoice Item",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "report": 0
+  },
+  {
+   "role": "CF Receptionist",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

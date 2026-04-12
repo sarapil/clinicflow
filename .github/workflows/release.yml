@@ -1,0 +1,41 @@
+name: Release — ClinicFlow
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: "Release type"
+        required: true
+        type: choice
+        options: [patch, minor, major]
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Get version
+        id: version
+        run: echo "tag=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+      - name: Generate changelog
+        run: |
+          git log $(git describe --tags --abbrev=0 HEAD^)..HEAD             --pretty=format:"- %s (%h)" > RELEASE_NOTES.md
+          cat RELEASE_NOTES.md
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          release_name: "ClinicFlow ${{ steps.version.outputs.tag }}"
+          body_path: RELEASE_NOTES.md
+          draft: false
+          prerelease: false

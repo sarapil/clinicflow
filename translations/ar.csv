@@ -1,0 +1,134 @@
+source_text,translated_text
+ClinicFlow,كلينيك فلو
+CF Patient,مريض
+CF Appointment,موعد
+CF Consultation,استشارة
+CF Prescription,وصفة طبية
+CF Lab Order,طلب مختبر
+CF Lab Result,نتيجة مختبر
+CF Radiology Order,طلب أشعة
+CF Radiology Result,نتيجة أشعة
+CF Clinic Invoice,فاتورة عيادة
+CF Clinic Payment,دفعة عيادة
+CF Insurance Claim,مطالبة تأمين
+CF Insurance Policy,وثيقة تأمين
+CF Service,خدمة طبية
+CF Doctor Schedule,جدول طبيب
+CF Clinical Settings,إعدادات سريرية
+CF Vital Signs,العلامات الحيوية
+CF Diagnosis Item,بند تشخيص
+CF Chief Complaint Item,شكوى رئيسية
+CF Referral,إحالة
+CF Sick Leave Certificate,شهادة إجازة مرضية
+CF Treatment Plan,خطة علاجية
+CF Drug Dispensing,صرف دواء
+CF Drug Dispensing Item,بند صرف دواء
+CF Pharmacy Bin,رف صيدلية
+CF Pharmacy Transaction,حركة صيدلية
+CF Appointment Slot,فترة موعد
+CF Appointment Template,قالب موعد
+CF Appointment Queue,طابور انتظار
+CF Wait List,قائمة انتظار
+CF Prescription Item,بند وصفة طبية
+CF Patient Allergy,حساسية مريض
+CF Patient Chronic Condition,حالة مزمنة
+CF Patient Document,وثيقة مريض
+CF Emergency Contact,جهة اتصال طوارئ
+CF Schedule Slot,فترة جدول
+CF Consultation Template,قالب استشارة
+CF AI Suggestion,اقتراح ذكاء اصطناعي
+Patient Name,اسم المريض
+Date of Birth,تاريخ الميلاد
+Gender,الجنس
+Blood Type,فصيلة الدم
+Phone,الهاتف
+Email,البريد الإلكتروني
+Address,العنوان
+Patient ID,رقم المريض
+Appointment Date,تاريخ الموعد
+Appointment Time,وقت الموعد
+Appointment Type,نوع الموعد
+Practitioner,الطبيب
+Status,الحالة
+Scheduled,مجدول
+Confirmed,مؤكد
+Completed,مكتمل
+Cancelled,ملغى
+No Show,لم يحضر
+Chief Complaint,الشكوى الرئيسية
+Examination Findings,نتائج الفحص
+Diagnosis Summary,ملخص التشخيص
+Management Plan,خطة العلاج
+Drug Name,اسم الدواء
+Dosage,الجرعة
+Frequency,التكرار
+Duration,المدة
+Route,طريق الإعطاء
+Lab Test,فحص مختبري
+Test Result,نتيجة الفحص
+Normal Range,النطاق الطبيعي
+Units,الوحدات
+Service Name,اسم الخدمة
+Price,السعر
+Quantity,الكمية
+Amount,المبلغ
+Total,المجموع
+Paid Amount,المبلغ المدفوع
+Outstanding Amount,المبلغ المستحق
+Insurance Provider,مزود التأمين
+Policy Number,رقم الوثيقة
+Coverage Percentage,نسبة التغطية
+Claim Status,حالة المطالبة
+Submitted,مقدمة
+Approved,معتمدة
+Rejected,مرفوضة
+Vital Signs,العلامات الحيوية
+Blood Pressure,ضغط الدم
+Pulse Rate,معدل النبض
+Temperature,درجة الحرارة
+Respiratory Rate,معدل التنفس
+Oxygen Saturation,تشبع الأكسجين
+Weight,الوزن
+Height,الطول
+BMI,مؤشر كتلة الجسم
+Allergy,حساسية
+Severity,الشدة
+Mild,خفيف
+Moderate,متوسط
+Severe,شديد
+Reaction,التفاعل
+General Consultation,استشارة عامة
+Follow-up,متابعة
+Emergency,طوارئ
+Referral,إحالة
+Select the patient for this appointment,اختر المريض لهذا الموعد
+Select the practitioner,اختر الطبيب
+Active,نشط
+Inactive,غير نشط
+Draft,مسودة
+Submitted,مقدم
+Cancelled,ملغى
+Ministry of Health Number,رقم وزارة الصحة
+Insurance Card Number,رقم بطاقة التأمين
+Preferred Language,اللغة المفضلة
+Arabic,العربية
+English,الإنجليزية
+Appointment is not available,الموعد غير متاح
+Cannot cancel a {0} appointment,لا يمكن إلغاء موعد بحالة {0}
+Chief complaint is required,الشكوى الرئيسية مطلوبة
+Diagnosis summary required before submitting,ملخص التشخيص مطلوب قبل التقديم
+Patient not found,المريض غير موجود
+Access denied,الوصول مرفوض
+Feature not enabled,الميزة غير مفعّلة
+Clinic Management,إدارة العيادة
+Appointments,المواعيد
+Consultations,الاستشارات
+Prescriptions,الوصفات الطبية
+Laboratory,المختبر
+Radiology,الأشعة
+Billing,الفواتير
+Insurance,التأمين
+Pharmacy,الصيدلية
+Settings,الإعدادات
+Reports,التقارير
+Dashboard,لوحة المتابعة

@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "drug",
+  "cb_pb1",
+  "quantity_on_hand",
+  "reorder_level",
+  "cb_pb2",
+  "unit",
+  "batch_no",
+  "cb_pb3",
+  "expiry_date",
+  "cost_price",
+  "cb_pb4",
+  "selling_price",
+  "location",
+  "cb_pb5",
+  "last_received"
+ ],
+ "fields": [
+  {
+   "fieldname": "drug",
+   "fieldtype": "Link",
+   "label": "Drug",
+   "options": "MC Drug",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "cb_pb1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "quantity_on_hand",
+   "fieldtype": "Float",
+   "label": "Qty on Hand",
+   "in_list_view": 1,
+   "default": "0"
+  },
+  {
+   "fieldname": "reorder_level",
+   "fieldtype": "Float",
+   "label": "Reorder Level"
+  },
+  {
+   "fieldname": "cb_pb2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "batch_no",
+   "fieldtype": "Data",
+   "label": "Batch No."
+  },
+  {
+   "fieldname": "cb_pb3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expiry_date",
+   "fieldtype": "Date",
+   "label": "Expiry Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cost_price",
+   "fieldtype": "Currency",
+   "label": "Cost Price"
+  },
+  {
+   "fieldname": "cb_pb4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "selling_price",
+   "fieldtype": "Currency",
+   "label": "Selling Price"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Storage Location"
+  },
+  {
+   "fieldname": "cb_pb5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_received",
+   "fieldtype": "Date",
+   "label": "Last Received"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Pharmacy",
+ "name": "CF Pharmacy Bin",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "CF Pharmacist",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

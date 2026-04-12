@@ -1,0 +1,262 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "field:patient_id",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient_id",
+  "cb_p1",
+  "status",
+  "s_personal",
+  "first_name",
+  "cb_p2",
+  "last_name",
+  "date_of_birth",
+  "cb_p3",
+  "gender",
+  "blood_group",
+  "cb_p4",
+  "nationality",
+  "s_contact",
+  "mobile",
+  "cb_p5",
+  "phone",
+  "email",
+  "cb_p6",
+  "address",
+  "s_medical",
+  "allergies",
+  "chronic_conditions",
+  "emergency_contacts",
+  "s_insurance",
+  "national_id",
+  "cb_p7",
+  "insurance_policy",
+  "insurance_member_id",
+  "cb_p8",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient_id",
+   "fieldtype": "Data",
+   "label": "Patient ID",
+   "bold": 1,
+   "in_list_view": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "cb_p1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nInactive\nDeceased",
+   "default": "Active",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "s_personal",
+   "fieldtype": "Section Break",
+   "label": "Personal Information"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "cb_p2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_p3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOther",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "blood_group",
+   "fieldtype": "Select",
+   "label": "Blood Group",
+   "options": "\nA+\nA-\nB+\nB-\nAB+\nAB-\nO+\nO-"
+  },
+  {
+   "fieldname": "cb_p4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nationality",
+   "fieldtype": "Data",
+   "label": "Nationality"
+  },
+  {
+   "fieldname": "s_contact",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile Phone",
+   "in_list_view": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "cb_p5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "cb_p6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "s_medical",
+   "fieldtype": "Section Break",
+   "label": "Medical"
+  },
+  {
+   "fieldname": "allergies",
+   "fieldtype": "Table",
+   "label": "Allergies",
+   "options": "CF Patient Allergy"
+  },
+  {
+   "fieldname": "chronic_conditions",
+   "fieldtype": "Table",
+   "label": "Chronic Conditions",
+   "options": "CF Patient Chronic Condition"
+  },
+  {
+   "fieldname": "emergency_contacts",
+   "fieldtype": "Table",
+   "label": "Emergency Contacts",
+   "options": "CF Emergency Contact"
+  },
+  {
+   "fieldname": "s_insurance",
+   "fieldtype": "Section Break",
+   "label": "Insurance & ID"
+  },
+  {
+   "fieldname": "national_id",
+   "fieldtype": "Data",
+   "label": "National ID",
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "cb_p7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "insurance_policy",
+   "fieldtype": "Link",
+   "label": "Insurance Policy",
+   "options": "CF Insurance Policy"
+  },
+  {
+   "fieldname": "insurance_member_id",
+   "fieldtype": "Data",
+   "label": "Insurance Member ID"
+  },
+  {
+   "fieldname": "cb_p8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Clinical Notes"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Patient Management",
+ "name": "CF Patient",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "report": 0
+  },
+  {
+   "role": "CF Receptionist",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

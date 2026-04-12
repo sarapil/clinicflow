@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "provider_name",
+  "cb_ip1",
+  "policy_type",
+  "coverage_percentage",
+  "cb_ip2",
+  "deductible",
+  "max_benefit",
+  "cb_ip3",
+  "is_active",
+  "contact_phone",
+  "cb_ip4",
+  "contact_email",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "provider_name",
+   "fieldtype": "Data",
+   "label": "Provider Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1,
+   "in_global_search": 1
+  },
+  {
+   "fieldname": "cb_ip1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "policy_type",
+   "fieldtype": "Select",
+   "label": "Policy Type",
+   "options": "\nHMO\nPPO\nGovernment\nCorporate\nIndividual"
+  },
+  {
+   "fieldname": "coverage_percentage",
+   "fieldtype": "Float",
+   "label": "Coverage %",
+   "default": "80"
+  },
+  {
+   "fieldname": "cb_ip2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deductible",
+   "fieldtype": "Currency",
+   "label": "Deductible"
+  },
+  {
+   "fieldname": "max_benefit",
+   "fieldtype": "Currency",
+   "label": "Max Annual Benefit"
+  },
+  {
+   "fieldname": "cb_ip3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fieldname": "cb_ip4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact_email",
+   "fieldtype": "Data",
+   "label": "Contact Email"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Insurance",
+ "name": "CF Insurance Policy",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Billing Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 0,
+   "create": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "cb_ic1",
+  "insurance_policy",
+  "claim_date",
+  "cb_ic2",
+  "status",
+  "diagnosis_icd",
+  "cb_ic3",
+  "items",
+  "s_clm_amt",
+  "total_claim",
+  "cb_ic4",
+  "approved_amount",
+  "rejection_reason",
+  "cb_ic5",
+  "payment_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "CF Patient",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_ic1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "insurance_policy",
+   "fieldtype": "Link",
+   "label": "Insurance Policy",
+   "options": "CF Insurance Policy",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "claim_date",
+   "fieldtype": "Date",
+   "label": "Claim Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_ic2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nSubmitted\nUnder Review\nApproved\nPartially Approved\nRejected\nPaid",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "diagnosis_icd",
+   "fieldtype": "Link",
+   "label": "Primary Diagnosis",
+   "options": "MC ICD Entity"
+  },
+  {
+   "fieldname": "cb_ic3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Claim Items",
+   "options": "CF Insurance Claim Item"
+  },
+  {
+   "fieldname": "s_clm_amt",
+   "fieldtype": "Section Break",
+   "label": "Amounts"
+  },
+  {
+   "fieldname": "total_claim",
+   "fieldtype": "Currency",
+   "label": "Total Claimed",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_ic4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approved_amount",
+   "fieldtype": "Currency",
+   "label": "Approved Amount"
+  },
+  {
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "label": "Rejection Reason"
+  },
+  {
+   "fieldname": "cb_ic5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_reference",
+   "fieldtype": "Data",
+   "label": "Payment Reference"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Insurance",
+ "name": "CF Insurance Claim",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Billing Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 0,
+   "create": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

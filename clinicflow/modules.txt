@@ -1,0 +1,12 @@
+Patient Management
+Appointment
+Consultation
+Prescription
+Laboratory
+Radiology
+Billing
+Insurance
+Pharmacy
+Clinical Settings
+CF AI Clinical
+Reports

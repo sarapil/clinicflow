@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "cb_vs1",
+  "consultation",
+  "recorded_at",
+  "cb_vs2",
+  "recorded_by",
+  "s_vitals",
+  "temperature",
+  "cb_vs3",
+  "pulse",
+  "respiratory_rate",
+  "cb_vs4",
+  "blood_pressure_systolic",
+  "blood_pressure_diastolic",
+  "cb_vs5",
+  "oxygen_saturation",
+  "s_anthro",
+  "height_cm",
+  "cb_vs6",
+  "weight_kg",
+  "bmi",
+  "cb_vs7",
+  "waist_cm",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "CF Patient",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_vs1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consultation",
+   "fieldtype": "Link",
+   "label": "Consultation",
+   "options": "CF Consultation"
+  },
+  {
+   "fieldname": "recorded_at",
+   "fieldtype": "Datetime",
+   "label": "Recorded At",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_vs2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "recorded_by",
+   "fieldtype": "Link",
+   "label": "Recorded By",
+   "options": "User"
+  },
+  {
+   "fieldname": "s_vitals",
+   "fieldtype": "Section Break",
+   "label": "Vitals"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "label": "Temperature (\u00b0C)"
+  },
+  {
+   "fieldname": "cb_vs3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pulse",
+   "fieldtype": "Int",
+   "label": "Pulse (bpm)"
+  },
+  {
+   "fieldname": "respiratory_rate",
+   "fieldtype": "Int",
+   "label": "Respiratory Rate"
+  },
+  {
+   "fieldname": "cb_vs4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "blood_pressure_systolic",
+   "fieldtype": "Int",
+   "label": "BP Systolic"
+  },
+  {
+   "fieldname": "blood_pressure_diastolic",
+   "fieldtype": "Int",
+   "label": "BP Diastolic"
+  },
+  {
+   "fieldname": "cb_vs5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "oxygen_saturation",
+   "fieldtype": "Float",
+   "label": "SpO\u2082 (%)"
+  },
+  {
+   "fieldname": "s_anthro",
+   "fieldtype": "Section Break",
+   "label": "Anthropometric"
+  },
+  {
+   "fieldname": "height_cm",
+   "fieldtype": "Float",
+   "label": "Height (cm)"
+  },
+  {
+   "fieldname": "cb_vs6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight_kg",
+   "fieldtype": "Float",
+   "label": "Weight (kg)"
+  },
+  {
+   "fieldname": "bmi",
+   "fieldtype": "Float",
+   "label": "BMI"
+  },
+  {
+   "fieldname": "cb_vs7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "waist_cm",
+   "fieldtype": "Float",
+   "label": "Waist (cm)"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Consultation",
+ "name": "CF Vital Signs",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "report": 0
+  },
+  {
+   "role": "CF Receptionist",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

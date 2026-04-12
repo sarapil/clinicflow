@@ -1,0 +1,215 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "cb_ci1",
+  "consultation",
+  "invoice_date",
+  "cb_ci2",
+  "due_date",
+  "status",
+  "cb_ci3",
+  "payment_method",
+  "items",
+  "s_tots",
+  "subtotal",
+  "cb_ci4",
+  "discount_amount",
+  "tax_amount",
+  "cb_ci5",
+  "grand_total",
+  "paid_amount",
+  "cb_ci6",
+  "outstanding",
+  "s_ins_link",
+  "insurance_claim",
+  "cb_ci7",
+  "insurance_amount",
+  "patient_responsibility",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "CF Patient",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "cb_ci1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consultation",
+   "fieldtype": "Link",
+   "label": "Consultation",
+   "options": "CF Consultation"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_ci2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nUnpaid\nPartially Paid\nPaid\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_ci3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "\nCash\nCard\nInsurance\nBank Transfer\nMobile Money"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Services / Items",
+   "options": "CF Clinic Invoice Item"
+  },
+  {
+   "fieldname": "s_tots",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "subtotal",
+   "fieldtype": "Currency",
+   "label": "Subtotal",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_ci4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "label": "Tax"
+  },
+  {
+   "fieldname": "cb_ci5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "grand_total",
+   "fieldtype": "Currency",
+   "label": "Grand Total",
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Amount Paid"
+  },
+  {
+   "fieldname": "cb_ci6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "outstanding",
+   "fieldtype": "Currency",
+   "label": "Outstanding"
+  },
+  {
+   "fieldname": "s_ins_link",
+   "fieldtype": "Section Break",
+   "label": "Insurance"
+  },
+  {
+   "fieldname": "insurance_claim",
+   "fieldtype": "Link",
+   "label": "Insurance Claim",
+   "options": "CF Insurance Claim"
+  },
+  {
+   "fieldname": "cb_ci7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "insurance_amount",
+   "fieldtype": "Currency",
+   "label": "Insurance Covered"
+  },
+  {
+   "fieldname": "patient_responsibility",
+   "fieldtype": "Currency",
+   "label": "Patient Share"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Billing",
+ "name": "CF Clinic Invoice",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Billing Clerk",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 0,
+   "create": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

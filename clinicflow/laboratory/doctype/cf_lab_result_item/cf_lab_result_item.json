@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "test_name",
+  "cb_lri1",
+  "loinc_code",
+  "result_value",
+  "cb_lri2",
+  "unit",
+  "reference_range",
+  "cb_lri3",
+  "flag",
+  "result_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "test_name",
+   "fieldtype": "Data",
+   "label": "Test",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_lri1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loinc_code",
+   "fieldtype": "Link",
+   "label": "LOINC Code",
+   "options": "MC LOINC Code"
+  },
+  {
+   "fieldname": "result_value",
+   "fieldtype": "Data",
+   "label": "Result Value",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_lri2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "reference_range",
+   "fieldtype": "Data",
+   "label": "Reference Range"
+  },
+  {
+   "fieldname": "cb_lri3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "flag",
+   "fieldtype": "Select",
+   "label": "Flag",
+   "options": "\n\nHigh\nLow\nCritical High\nCritical Low\nAbnormal"
+  },
+  {
+   "fieldname": "result_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPreliminary\nFinal\nCorrected",
+   "default": "Final"
+  }
+ ],
+ "istable": 1,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Laboratory",
+ "name": "CF Lab Result Item",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "report": 0
+  },
+  {
+   "role": "CF Receptionist",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

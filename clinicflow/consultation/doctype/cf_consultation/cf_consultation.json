@@ -1,0 +1,234 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "cb_c1",
+  "appointment",
+  "doctor",
+  "cb_c2",
+  "consultation_date",
+  "consultation_time",
+  "cb_c3",
+  "status",
+  "s_cc",
+  "chief_complaints",
+  "s_exam",
+  "examination_notes",
+  "s_dx",
+  "diagnoses",
+  "s_soap",
+  "subjective",
+  "cb_c4",
+  "objective",
+  "assessment",
+  "cb_c5",
+  "plan",
+  "s_fu",
+  "follow_up_required",
+  "cb_c6",
+  "follow_up_date",
+  "follow_up_instructions",
+  "cb_c7",
+  "referral"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "CF Patient",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "cb_c1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appointment",
+   "fieldtype": "Link",
+   "label": "Appointment",
+   "options": "CF Appointment"
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "User",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_c2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consultation_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "consultation_time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "cb_c3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nIn Progress\nCompleted\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "s_cc",
+   "fieldtype": "Section Break",
+   "label": "Chief Complaints"
+  },
+  {
+   "fieldname": "chief_complaints",
+   "fieldtype": "Table",
+   "label": "Chief Complaints",
+   "options": "CF Chief Complaint Item"
+  },
+  {
+   "fieldname": "s_exam",
+   "fieldtype": "Section Break",
+   "label": "Examination"
+  },
+  {
+   "fieldname": "examination_notes",
+   "fieldtype": "Text",
+   "label": "Physical Examination Notes"
+  },
+  {
+   "fieldname": "s_dx",
+   "fieldtype": "Section Break",
+   "label": "Diagnoses"
+  },
+  {
+   "fieldname": "diagnoses",
+   "fieldtype": "Table",
+   "label": "Diagnoses",
+   "options": "CF Diagnosis Item"
+  },
+  {
+   "fieldname": "s_soap",
+   "fieldtype": "Section Break",
+   "label": "SOAP"
+  },
+  {
+   "fieldname": "subjective",
+   "fieldtype": "Text",
+   "label": "Subjective"
+  },
+  {
+   "fieldname": "cb_c4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "objective",
+   "fieldtype": "Text",
+   "label": "Objective"
+  },
+  {
+   "fieldname": "assessment",
+   "fieldtype": "Text",
+   "label": "Assessment & Plan"
+  },
+  {
+   "fieldname": "cb_c5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "plan",
+   "fieldtype": "Text",
+   "label": "Plan"
+  },
+  {
+   "fieldname": "s_fu",
+   "fieldtype": "Section Break",
+   "label": "Follow-up"
+  },
+  {
+   "fieldname": "follow_up_required",
+   "fieldtype": "Check",
+   "label": "Follow-up Required"
+  },
+  {
+   "fieldname": "cb_c6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "fieldname": "follow_up_instructions",
+   "fieldtype": "Small Text",
+   "label": "Instructions"
+  },
+  {
+   "fieldname": "cb_c7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "referral",
+   "fieldtype": "Link",
+   "label": "Referral",
+   "options": "CF Referral"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Consultation",
+ "name": "CF Consultation",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1
+  },
+  {
+   "role": "CF Receptionist",
+   "read": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

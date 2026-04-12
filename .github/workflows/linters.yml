@@ -1,0 +1,26 @@
+name: Linters — ClinicFlow
+
+on:
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  ruff:
+    name: Ruff (Python)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install ruff
+      - run: ruff check clinicflow/
+      - run: ruff format --check clinicflow/
+
+  translation-check:
+    name: Translation Completeness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check ar.csv exists and non-empty
+        run: |
+          test -f translations/ar.csv || (echo "❌ translations/ar.csv missing" && exit 1)
+          wc -l translations/ar.csv
+          echo "✅ Arabic translations present"

@@ -1,0 +1,143 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "cb_pr1",
+  "consultation",
+  "prescribing_doctor",
+  "cb_pr2",
+  "prescription_date",
+  "status",
+  "cb_pr3",
+  "pharmacy_dispensed",
+  "medications",
+  "s_prx_notes",
+  "clinical_notes",
+  "cb_pr4",
+  "dispensing_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "CF Patient",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "cb_pr1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consultation",
+   "fieldtype": "Link",
+   "label": "Consultation",
+   "options": "CF Consultation"
+  },
+  {
+   "fieldname": "prescribing_doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "User",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_pr2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "prescription_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPending\nDispensed\nPartially Dispensed\nCancelled",
+   "default": "Pending",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_pr3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pharmacy_dispensed",
+   "fieldtype": "Check",
+   "label": "Dispensed"
+  },
+  {
+   "fieldname": "medications",
+   "fieldtype": "Table",
+   "label": "Medications",
+   "options": "CF Prescription Item"
+  },
+  {
+   "fieldname": "s_prx_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "clinical_notes",
+   "fieldtype": "Small Text",
+   "label": "Clinical Notes"
+  },
+  {
+   "fieldname": "cb_pr4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dispensing_notes",
+   "fieldtype": "Small Text",
+   "label": "Dispensing Notes"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Prescription",
+ "name": "CF Prescription",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "CF Pharmacist",
+   "read": 1,
+   "write": 1
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

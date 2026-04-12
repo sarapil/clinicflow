@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "allow_import": 0,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "drug",
+  "cb_pi1",
+  "drug_generic",
+  "dose",
+  "cb_pi2",
+  "frequency",
+  "duration",
+  "cb_pi3",
+  "route",
+  "quantity",
+  "cb_pi4",
+  "unit",
+  "instructions",
+  "cb_pi5",
+  "is_prn"
+ ],
+ "fields": [
+  {
+   "fieldname": "drug",
+   "fieldtype": "Link",
+   "label": "Drug",
+   "options": "MC Drug",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_pi1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "drug_generic",
+   "fieldtype": "Data",
+   "label": "Generic Name"
+  },
+  {
+   "fieldname": "dose",
+   "fieldtype": "Data",
+   "label": "Dose",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_pi2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Data",
+   "label": "Frequency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "Duration"
+  },
+  {
+   "fieldname": "cb_pi3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Select",
+   "label": "Route",
+   "options": "\nOral\nInjection\nTopical\nInhalation\nRectal\nOphthalmic\nNasal"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Float",
+   "label": "Qty",
+   "default": "1"
+  },
+  {
+   "fieldname": "cb_pi4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fieldname": "instructions",
+   "fieldtype": "Small Text",
+   "label": "Instructions"
+  },
+  {
+   "fieldname": "cb_pi5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_prn",
+   "fieldtype": "Check",
+   "label": "As Needed (PRN)"
+  }
+ ],
+ "istable": 1,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Prescription",
+ "name": "CF Prescription Item",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "report": 0
+  },
+  {
+   "role": "CF Receptionist",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

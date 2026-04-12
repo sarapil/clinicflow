@@ -1,0 +1,194 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "cb_a1",
+  "appointment_type",
+  "doctor",
+  "cb_a2",
+  "appointment_date",
+  "appointment_time",
+  "cb_a3",
+  "duration",
+  "status",
+  "cb_a4",
+  "consultation",
+  "s_appt_details",
+  "chief_complaint",
+  "cb_a5",
+  "notes",
+  "s_cancel",
+  "cancellation_reason",
+  "cb_a6",
+  "cancelled_by",
+  "cancelled_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "CF Patient",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "cb_a1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appointment_type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nNew Patient\nFollow-up\nUrgent\nTelehealth\nProcedure",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "User",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_a2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "appointment_date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "appointment_time",
+   "fieldtype": "Time",
+   "label": "Time",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_a3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration (min)",
+   "default": "15"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nScheduled\nConfirmed\nIn-Progress\nCompleted\nCancelled\nNo Show",
+   "default": "Scheduled",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_a4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consultation",
+   "fieldtype": "Link",
+   "label": "Consultation",
+   "options": "CF Consultation"
+  },
+  {
+   "fieldname": "s_appt_details",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "chief_complaint",
+   "fieldtype": "Small Text",
+   "label": "Chief Complaint",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_a5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "s_cancel",
+   "fieldtype": "Section Break",
+   "label": "Cancellation"
+  },
+  {
+   "fieldname": "cancellation_reason",
+   "fieldtype": "Select",
+   "label": "Cancellation Reason",
+   "options": "\nPatient Request\nDoctor Unavailable\nEmergency\nNo Show\nOther"
+  },
+  {
+   "fieldname": "cb_a6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cancelled_by",
+   "fieldtype": "Link",
+   "label": "Cancelled By",
+   "options": "User"
+  },
+  {
+   "fieldname": "cancelled_at",
+   "fieldtype": "Datetime",
+   "label": "Cancelled At"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Appointment",
+ "name": "CF Appointment",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1
+  },
+  {
+   "role": "CF Receptionist",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 0
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 0
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

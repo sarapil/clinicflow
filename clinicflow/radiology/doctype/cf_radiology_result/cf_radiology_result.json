@@ -1,0 +1,171 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "radiology_order",
+  "cb_rr1",
+  "patient",
+  "radiologist",
+  "cb_rr2",
+  "study_date",
+  "report_date",
+  "cb_rr3",
+  "status",
+  "findings",
+  "cb_rr4",
+  "impression",
+  "report_file",
+  "cb_rr5",
+  "images",
+  "critical_finding",
+  "cb_rr6",
+  "critical_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "radiology_order",
+   "fieldtype": "Link",
+   "label": "Radiology Order",
+   "options": "CF Radiology Order",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_rr1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "CF Patient",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "radiologist",
+   "fieldtype": "Link",
+   "label": "Radiologist",
+   "options": "User"
+  },
+  {
+   "fieldname": "cb_rr2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "study_date",
+   "fieldtype": "Datetime",
+   "label": "Study Date"
+  },
+  {
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "label": "Report Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_rr3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPreliminary\nFinal\nCorrected",
+   "default": "Final",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "findings",
+   "fieldtype": "Text",
+   "label": "Findings"
+  },
+  {
+   "fieldname": "cb_rr4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "impression",
+   "fieldtype": "Text",
+   "label": "Impression"
+  },
+  {
+   "fieldname": "report_file",
+   "fieldtype": "Attach",
+   "label": "Report File"
+  },
+  {
+   "fieldname": "cb_rr5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Attach Multiple",
+   "label": "Images"
+  },
+  {
+   "fieldname": "critical_finding",
+   "fieldtype": "Check",
+   "label": "Critical Finding"
+  },
+  {
+   "fieldname": "cb_rr6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "critical_notes",
+   "fieldtype": "Small Text",
+   "label": "Critical Notes"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Radiology",
+ "name": "CF Radiology Result",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "report": 0
+  },
+  {
+   "role": "CF Receptionist",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

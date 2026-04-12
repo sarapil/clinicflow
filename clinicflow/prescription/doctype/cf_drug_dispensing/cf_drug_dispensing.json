@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "prescription",
+  "cb_dd1",
+  "patient",
+  "dispensed_by",
+  "cb_dd2",
+  "dispensed_at",
+  "items",
+  "total_amount",
+  "cb_dd3",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "prescription",
+   "fieldtype": "Link",
+   "label": "Prescription",
+   "options": "CF Prescription",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_dd1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "CF Patient",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "dispensed_by",
+   "fieldtype": "Link",
+   "label": "Dispensed By",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_dd2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "dispensed_at",
+   "fieldtype": "Datetime",
+   "label": "Dispensed At",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items Dispensed",
+   "options": "CF Drug Dispensing Item"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_dd3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Prescription",
+ "name": "CF Drug Dispensing",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "CF Pharmacist",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

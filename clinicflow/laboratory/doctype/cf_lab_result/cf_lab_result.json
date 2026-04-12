@@ -1,0 +1,149 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "lab_order",
+  "cb_lr1",
+  "patient",
+  "performed_by",
+  "cb_lr2",
+  "performed_at",
+  "report_date",
+  "cb_lr3",
+  "status",
+  "results",
+  "s_sum",
+  "summary",
+  "cb_lr4",
+  "reviewed_by",
+  "reviewed_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "lab_order",
+   "fieldtype": "Link",
+   "label": "Lab Order",
+   "options": "CF Lab Order",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_lr1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "CF Patient",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "performed_by",
+   "fieldtype": "Link",
+   "label": "Lab Technician",
+   "options": "User"
+  },
+  {
+   "fieldname": "cb_lr2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "performed_at",
+   "fieldtype": "Datetime",
+   "label": "Performed At",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "label": "Report Date"
+  },
+  {
+   "fieldname": "cb_lr3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nPreliminary\nFinal\nCorrected",
+   "default": "Preliminary",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "results",
+   "fieldtype": "Table",
+   "label": "Test Results",
+   "options": "CF Lab Result Item"
+  },
+  {
+   "fieldname": "s_sum",
+   "fieldtype": "Section Break",
+   "label": "Summary"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text",
+   "label": "Summary Notes"
+  },
+  {
+   "fieldname": "cb_lr4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reviewed_by",
+   "fieldtype": "Link",
+   "label": "Reviewed By",
+   "options": "User"
+  },
+  {
+   "fieldname": "reviewed_at",
+   "fieldtype": "Datetime",
+   "label": "Reviewed At"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Laboratory",
+ "name": "CF Lab Result",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Lab Technician",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

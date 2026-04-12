@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2026-04-12 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "patient",
+  "cb_ro1",
+  "consultation",
+  "ordering_doctor",
+  "cb_ro2",
+  "order_date",
+  "modality",
+  "cb_ro3",
+  "body_part",
+  "clinical_indication",
+  "cb_ro4",
+  "urgency",
+  "status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "CF Patient",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "cb_ro1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consultation",
+   "fieldtype": "Link",
+   "label": "Consultation",
+   "options": "CF Consultation"
+  },
+  {
+   "fieldname": "ordering_doctor",
+   "fieldtype": "Link",
+   "label": "Doctor",
+   "options": "User",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_ro2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "order_date",
+   "fieldtype": "Date",
+   "label": "Order Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "modality",
+   "fieldtype": "Select",
+   "label": "Modality",
+   "options": "\nX-Ray\nCT Scan\nMRI\nUltrasound\nEcho\nPET Scan\nNuclear Medicine\nFluoroscopy\nOther",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_ro3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "body_part",
+   "fieldtype": "Data",
+   "label": "Body Part/Region",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "clinical_indication",
+   "fieldtype": "Small Text",
+   "label": "Clinical Indication"
+  },
+  {
+   "fieldname": "cb_ro4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "urgency",
+   "fieldtype": "Select",
+   "label": "Urgency",
+   "options": "\nRoutine\nUrgent\nStat",
+   "default": "Routine"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOrdered\nScheduled\nPerformed\nReported\nCancelled",
+   "default": "Ordered",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Special Instructions"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "links": [],
+ "modified": "2026-04-12 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Radiology",
+ "name": "CF Radiology Order",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "CF Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "CF Doctor",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "report": 1
+  },
+  {
+   "role": "CF Nurse",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "report": 0
+  },
+  {
+   "role": "CF Receptionist",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
