@@ -1,0 +1,11 @@
+{
+  "name": "clinicflow",
+  "title": "ClinicFlow",
+  "title_ar": "كلينيك فلو",
+  "icon": "clinic",
+  "color": "#0EA5E9",
+  "version": "0.0.1",
+  "languages": ["en", "ar"],
+  "description": "Outpatient Clinic Management System",
+  "description_ar": "نظام إدارة العيادات الخارجية"
+}
