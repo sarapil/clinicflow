@@ -30,7 +30,11 @@ def _mark_no_shows():
 
 
 def _send_appointment_reminders():
-    """Send reminders for appointments in the next 24 hours."""
+    """Send reminders for appointments in the next 24 hours.
+
+    Uses NotifyPro if installed for multi-channel delivery (SMS, WhatsApp, email).
+    Falls back to frappe.sendmail if NotifyPro is not available.
+    """
     from frappe.utils import now_datetime, add_to_date
     now = now_datetime()
     tomorrow = add_to_date(now, hours=24)
@@ -41,12 +45,19 @@ def _send_appointment_reminders():
             "scheduled_datetime": ["between", [now, tomorrow]],
             "reminder_sent": 0,
         },
-        fields=["name", "patient", "scheduled_datetime", "practitioner"],
+        fields=["name", "patient", "patient_name", "scheduled_datetime", "practitioner"],
     )
+    if not appointments:
+        return
+
+    use_notifypro = "notifypro" in frappe.get_installed_apps()
+
     for appt in appointments:
         try:
             patient = frappe.get_doc("CF Patient", appt.patient)
-            if patient.email:
+            if use_notifypro:
+                _send_via_notifypro(patient, appt)
+            elif patient.email:
                 frappe.sendmail(
                     recipients=[patient.email],
                     subject=f"Appointment Reminder — {appt.scheduled_datetime}",
@@ -55,8 +66,37 @@ def _send_appointment_reminders():
             frappe.db.set_value("CF Appointment", appt.name, "reminder_sent", 1)
         except Exception:
             frappe.log_error(frappe.get_traceback(), "CF Appointment Reminder Error")
-    if appointments:
-        frappe.db.commit()
+    frappe.db.commit()
+
+
+def _send_via_notifypro(patient, appt):
+    """Send appointment reminder via NotifyPro multi-channel delivery."""
+    try:
+        from notifypro.services.queue_service import QueueService
+        QueueService.enqueue_notification(
+            template="appointment_reminder",
+            recipients=[{
+                "email": patient.email,
+                "phone": getattr(patient, "mobile_phone", None),
+                "name": patient.patient_name,
+            }],
+            context={
+                "patient_name": patient.patient_name,
+                "appointment_date": str(appt.scheduled_datetime),
+                "practitioner": appt.practitioner,
+                "doctype": "CF Appointment",
+                "docname": appt.name,
+            },
+            channels=["email", "sms"],
+        )
+    except (ImportError, AttributeError):
+        # NotifyPro API not compatible — fall back to email
+        if patient.email:
+            frappe.sendmail(
+                recipients=[patient.email],
+                subject=f"Appointment Reminder — {appt.scheduled_datetime}",
+                message=f"Dear {patient.patient_name}, this is a reminder of your appointment tomorrow at {appt.scheduled_datetime}.",
+            )
 
 
 def _expire_old_wait_list():

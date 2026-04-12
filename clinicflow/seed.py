@@ -5,9 +5,22 @@ from frappe import _
 
 def seed_data():
     """Idempotent seed data — called on every migrate."""
+    _ensure_settings()
     _seed_appointment_templates()
     _seed_service_catalog()
     frappe.db.commit()
+
+
+def _ensure_settings():
+    """Ensure CF Clinical Settings exists — auto-create with defaults if missing."""
+    if not frappe.db.exists("CF Clinical Settings", "CF Clinical Settings"):
+        frappe.get_doc({
+            "doctype": "CF Clinical Settings",
+            "clinic_name": frappe.defaults.get_global_default("company") or "My Clinic",
+            "default_appointment_duration": 30,
+            "enable_ai_features": 0,
+        }).insert(ignore_permissions=True)
+        frappe.logger().info("CF Clinical Settings created with defaults")
 
 
 def _seed_appointment_templates():
